@@ -1,0 +1,13 @@
+#[starknet::contract]
+mod counter_contract {
+    #[storage]
+    struct Storage {
+      contract : u32
+    }
+    #[construtor]
+    fn construtor(ref self: construtor, input : u32){
+      self.contract.write = input;
+    }
+
+  }
+
